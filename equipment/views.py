@@ -42,7 +42,7 @@ def get_status(request):
     data = {'id': "c45bbe6c64dc",
             'auth_key': "MTg2OWQwdWlkDFA6B6EACDAB8BC84E33AD0BDC14EDF8679C4B20D3BF56A95FD20A4315B39ABD685253778554E9D6"
             }
-    status = requests.get(url=url, data=data)
+    status = requests.get(url=url, params=data)
 
     if status.status_code == 200:
         data = json.loads(status.content.decode('utf8').replace("'", '"'))
